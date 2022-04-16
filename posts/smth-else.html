@@ -6,28 +6,54 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4/css/tachyons.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/default.min.css">
     <title>Smth else</title>
 </head>
 
+<!--TODO: Fix Mobile View and center layout-->
+
 <body>
-    <article class="w-50-ns ph3 ph5-ns pv5 center">
-        <div class="navbar pr4-ns">
-            <ul class="flex flex-row justify-end mv2">
-                <li class="ph1"><a class="blue dim" href="/">Home</a></li>
-                <li class="ph1"><a class="blue dim" href="/about.html">About</a></li>
-            </ul>
-        </div>
+    <article class="w-60-ns w-75-l ph3 ph5-ns pv5 center white">
+        <div class="flex flex-row flex-wrap justify-between pt3">
+            <header class="flex flex-column">
+                <h1 class="f2 lh-title fw2 mb3 mt0">
+                    VMLK
+                </h1>
+                <div class="navbar bw1 bt justify-end">
+                    <ul class="mv2 f4 fw4 athelas">
+                        <li class="pv1 link"><a class="dim white" href="/">Home</a></li>
+                        <li class="pv1 link"><a class="dim white" href="/">Github</a></li>
+                    </ul>
+                </div>
+            </header>
+            <div class="w-75-l w-100-ns">
+                <h1 class="f2 lh-title fw2 mb3 mt0">Smth else</h1>
+                <div class="f5 fw3 lh-copy mt0-ns nested-img tj athelas">
+                    <h1 id='markdown:_syntax'>Markdown: Syntax</h1>
 
-        <header class="pr4-ns">
-            <h1 class="f2 lh-title fw2 mb3 mt0 pt3 bt bw2">Smth else</h1>
-        </header>
-        <div>
-            <p class="f5 lh-copy measure-wide mt0-ns black-70 nested-img">
-                <h1 id='this_is_also_a_test'>This is also a test</h1>
+<h2 id='overview'>Overview</h2>
 
-            </p>
+<h3 id='philosophy'>Philosophy</h3>
+
+<p>Markdown is intended to be as easy-to-read and easy-to-write as is feasible.</p>
+
+<p>Readability, however, is emphasized above all else. A Markdown-formatted document should be publishable as-is, as plain text, without looking like it&#8217;s been marked up with tags or formatting instructions. While Markdown&#8217;s syntax has been influenced by several existing text-to-HTML filters -- including <a href='http://docutils.sourceforge.net/mirror/setext.html'>Setext</a>, <a href='http://www.aaronsw.com/2002/atx/'>atx</a>, <a href='http://textism.com/tools/textile/'>Textile</a>, <a href='http://docutils.sourceforge.net/rst.html'>reStructuredText</a>, <a href='http://www.triptico.com/software/grutatxt.html'>Grutatext</a>, and <a href='http://ettext.taint.org/doc/'>EtText</a> -- the single biggest source of inspiration for Markdown&#8217;s syntax is the format of plain text email.</p>
+
+<p><strong>asdf</strong> <strong>asdfasdf</strong></p>
+
+<p><img src='https://images-ext-2.discordapp.net/external/5-_VOacIrIGwT_dUy3Q--hKXyvTdHgeQ14_mpRbW8KY/https/upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flint%252C_Michigan_Skyline.jpg/1200px-Flint%252C_Michigan_Skyline.jpg' alt='Img' /></p>
+
+                </div>
+            </div>
         </div>
-        <footer class="mt3 --black-10 black-70 bt">
+        <script src="https://utteranc.es/client.js"
+            repo="VMLK/oxide"
+            issue-term="title"
+            theme="github-dark"
+            crossorigin="anonymous"
+            async>
+        </script>
+        <footer class="mt3 white bt">
             <p class="f6 db b ttu lh-solid">VMLK</p>
             <div class="mt2">
                 <a href="https://github.com/VMLK" title="https://github.com/VMLK" class="f6 dib blue dim">Github</a>
@@ -46,21 +72,53 @@
     });
 </script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
-<style>
-    body {
-        font-family: Georgia, Palatino, serif
-    }
-    
-    ul {
-        list-style: none;
-        padding: 0;
-    }
+<script>hljs.highlightAll();</script>
 
-    a {
-        color: #357edd;
-        text-decoration: none;
-    }
-    </style>
+<style>
+ body {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,sans-serif;
+    background-color: #191E1E;
+}
+
+blockquote {
+    padding: 1rem;
+    border: 1px solid #f0f0f0;
+    background-color: #252929;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.link {
+    text-decoration: underline dashed 1px;
+    text-underline-offset: 3px;
+}
+
+a {
+    text-decoration: underline dashed 1px;
+    text-underline-offset: 3px;
+    color: #ffffff;
+
+    opacity:1;
+    transition:opacity .15s ease-in;
+}
+
+a:hover {
+    opacity:.5;
+    transition: opacity .15s ease-in;
+}
+strong {
+    font-weight: bold;
+}
+</style>
 </html>

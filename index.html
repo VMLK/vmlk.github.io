@@ -6,40 +6,83 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4/css/tachyons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <title>VMLK</title>
 </head>
 <body>
-    <article class="w-50-ns ph3 ph5-ns pv5 center">
-        <div class="navbar pr4-ns">
-            <ul class="flex flex-row justify-end mv2">
-                <li class="ph1"><a class="dim blue" href="/">Home</a></li>
-                <li class="ph1"><a class="dim blue" href="/about">About</a></li>
-            </ul>
-        </div>
-
-        <header class="pr4-ns">
-            <h1 class="f2 lh-title fw2 mb3 mt0 pt3 bt bw2">
-                VMLK
-            </h1>
-        </header>
-        <div>
-            <blockquote class="bl mid-gray measure ph3 bg-white-30">
-                <span class="fw8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sodales ut etiam sit amet nisl purus.</span>
-                <span class="db f8 mt3">- Faust I</span>
-            </blockquote>
-            <p class="f5 lh-copy measure-wide mt0-ns black-70 nested-img">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sodales ut etiam sit amet nisl purus. Etiam non quam lacus suspendisse faucibus interdum posuere. Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque sit. Eu scelerisque felis imperdiet proin fermentum leo vel. Arcu non sodales neque sodales ut etiam sit. Risus at ultrices mi tempus imperdiet. Felis bibendum ut tristique et. Est placerat in egestas erat. Pulvinar etiam non quam lacus suspendisse faucibus. Sem nulla pharetra diam sit amet nisl. Purus gravida quis blandit turpis. Leo vel fringilla est ullamcorper eget. Suspendisse in est ante in nibh mauris cursus mattis molestie. Risus quis varius quam quisque id diam vel. Velit laoreet id donec ultrices tincidunt arcu non. Mus mauris vitae ultricies leo integer malesuada nunc. Vitae tempus quam pellentesque nec nam aliquam sem.
-            </p>
-        </div>
-        <div id="posts">
-            <header>
-                <h2 class="f3 fw2 lh-copy mb3 mt0 pt3 bb">Posts</h2>
+    <article class="w-60-ns w-75-l ph3 ph5-ns pv5 center white">
+        <div class="flex flex-row flex-wrap justify-between pv3">
+            <header class="flex flex-column">
+                <h1 class="f2 lh-title fw2 mb3 mt0">
+                    VMLK
+                </h1>
+                <div class="navbar bw1 bt justify-end">
+                    <ul class="mv2 f4 fw4 athelas">
+                        <li class="pv1 link"><a class="dim white" href="/">Home</a></li>
+                        <li class="pv1 link"><a class="dim white" href="/">Github</a></li>
+                    </ul>
+                </div>
             </header>
-            <ul>
-                <li><time class="mid-gray tracked">22/01/22</time><a class="dib pl2 blue dim" href="posts/introduction-post.html"><h2 class="f5 dib blue dim">Introduction Post</h2></a></li><li><time class="mid-gray tracked">21/01/22</time><a class="dib pl2 blue dim" href="posts/smth-else.html"><h2 class="f5 dib blue dim">Smth else</h2></a></li>
-            </ul>
+            <div class="w-75-l w-100-ns">
+                <p class="f5 lh-copy mt0-ns nested-img tj athelas">
+                    Fulltime student from Germany writing about various topics ranging from <b>Mathematics</b> and <b>Computer Science</b> to <b>Sociology</b> and <b>Economy</b>. Generally just about anything that interests me. You can also find out more about past programming <a class="link dim white" href="#Projects">projects</a> I've worked on.
+                </p>
+            </div>
         </div>
-        <footer class="mt3 --black-10 black-70 bt">
+        <div class="cf">
+            <div id="posts" class="fl w-100 w-50-ns athelas">
+                <div class="mr4-ns">
+                    <header>
+                        <h2 class="f3 fw5 lh-copy mb3 mt0 bb pv1">Posts</h2>
+                    </header>
+                    <ul>
+                        <li class="flex flex-row items-center justify-between"><a class="link white dim" href="posts/introduction-post.html"><h2 class="f4 mt0 mb2">Introduction Post</h2></a></li><li class="flex flex-row items-center justify-between"><a class="link white dim" href="posts/smth-else.html"><h2 class="f4 mt0 mb2">Smth else</h2></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="Projects" class="fl w-100 w-50-ns">
+                <div class="ml4-ns">
+                    <header>
+                        <h2 class="f3 fw5 lh-copy mb3 mt0 bb pv1 athelas">Projects</h2>
+                    </header>
+                    <div class="flex flex-column ba dim mv3">
+                        <a href="https://github.com/VMLK/oxide">
+                            <div class="flex flex-row justify-between black-70 bg-white mv0 pv2 ph3 f5">
+                                <span>Oxide</span>
+                                <div class="flex flex-row">
+                                    <i class="devicon-rust-plain f4 ph"></i>
+                                    <i class="devicon-html5-plain f4"></i>
+                                </div>
+                            </div>
+                            <p class="ph3 f6 white">Oxide is a small static site generator which compiles to a single binary and supports custom templates. It also powers this blog!</p>
+                        </a>
+                    </div>
+                    <div class="flex flex-column ba dim mv3">
+                        <a href="https://crates.io/crates/optparse">
+                            <div class="flex flex-row justify-between black-70 bg-white mv0 pv2 ph3 f5">
+                                <span>optparse</span>
+                                <i class="devicon-rust-plain f4"></i>
+                            </div>
+                            <p class="ph3 f6 white">Quick and simple argument parser. Gets the job done.</p>
+                        </a>
+                    </div>
+                    <div class="flex flex-column ba dim mv3">
+                        <a href="https://github.com/VMLK/deblock">
+                            <div class="flex flex-row justify-between black-70 bg-white mv0 pv2 ph3 f5">
+                                    <span>De:Block</span>
+                                    <div class="flex flex-row">
+                                        <i class="devicon-rust-plain f4 ph"></i>
+                                        <i class="devicon-solidity-plain f4"></i>
+                                    </div>
+                            </div>
+                            <p class="ph3 f6 white">Scraping and saving ERC721 tokens from newly added blocks using the Infura Ethereum Gateway/RPC interface.</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="mt3 white bt">
             <p class="f6 db b ttu lh-solid">VMLK</p>
             <div class="mt2">
                 <a href="https://github.com/VMLK" title="https://github.com/VMLK" class="f6 dib blue dim">Github</a>
@@ -51,7 +94,8 @@
 
 <style>
 body {
-    font-family: Georgia, Palatino, serif
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,sans-serif;
+    background-color: #191E1E;
 }
 
 ul {
@@ -64,7 +108,12 @@ ul {
     padding: 0;
 }
 
-.navbar a {
+.link {
+    text-decoration: underline dashed 1px;
+    text-underline-offset: 3px;
+}
+
+a {
     text-decoration: none;
 }
 </style>
