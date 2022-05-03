@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en_EN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <link rel="stylesheet" href="https://unpkg.com/tachyons@4/css/tachyons.min.css">
+  <title>Protocol Overview</title>
+</head>
+<body>
+  <div class="w-100 w-50-l ph3 ph5-ns pv3 center">
+    <header class="flex flex-column ba">
+      <div class="nav flex flex-row w-100 justify-between ttu b">
+        <div class="flex flex-row">
+          <a href="/" class="ph2 pink br b--black hover-bg-pink hover-white">home</a>
+        </div>
+        <div class="flex flex-row">
+          <a href="https://github.com/" class="ph2 pink bl b--black hover-bg-pink hover-white">readme.md</a>
+        </div>
+      </div>
+    </header>
+    <div class="content ph4-ns ph2 pv3">
+      <h2 class="lh-title pink">Protocol Overview</h2>
+      <p class="tj">
+        <p>PTP^2 is an experimental <code>Peer-To-Peer</code>, <code>Plain Text Protocol</code> aimed at providing:</p>
+
+<ul>
+<li><strong>complete decentralisation</strong> with a minimal number of root servers</li>
+
+<li><strong>attribution</strong> and <strong>mutability</strong></li>
+
+<li>a <strong>human readable</strong> protocol</li>
+
+<li>a <strong>reliable/fast</strong> connection</li>
+
+<li>an <strong>Internet Protocol independent</strong> communication scheme</li>
+</ul>
+
+<p>Implementations should also provide a <strong>low memory overhead</strong> and <strong>minimise energy consumption</strong>.</p>
+
+<p>The basis of this protocol is the <strong>asymmetric encryption</strong> scheme which is used to ensure the <strong>attribution</strong> and <strong>mutability</strong> of data. Data or <code>resources</code> are identified by a cryptographically secure keypair used to address the data it is associated with and verify its validity utilising the <code>signature</code> stored with every <code>resource</code>. A <code>local cache</code> and a <code>remote cache</code> are kept alongside a <code>peer-list</code> to reduce the amount of time it takes to acquire a requested <code>resource</code>.</p>
+
+      </p>
+    </div>
+    <footer>
+      <div class="flex flex-row ba b">
+        <a href="https://github.com/VMLK/" class="ph2 pink br b--black hover-bg-pink hover-white">Github</a>
+        <a href="https://mstdn.social/web/@vmlk" class="ph2 pink br b--black hover-bg-pink hover-white">Mastodon</a>
+      </div>
+    </footer>
+  </div>
+</body>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,400;0,500;0,700;1,400&display=swap');
+
+body {
+  font-family: 'IBM Plex Mono', monospace;
+  background-color: #F2F2F2;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+li:before {
+  content: '§';
+  margin-left: -1em;
+  margin-right: 0.5em;
+  color: #FF80CC;
+  font-weight: bold;
+}
+
+code {
+  background-color: #dadada;
+  border-radius: 5px;
+  padding: 0px 5px 0px 5px;
+}
+
+pre code {
+  background-color: #f2f2f2;
+  border-radius: 0px;
+  padding: 0;
+}
+
+p {
+  text-align:justify
+}
+
+h1, h2, h3 {
+  line-height:1.25;
+  color: #FF80CC;
+}
+</style>
+</html>

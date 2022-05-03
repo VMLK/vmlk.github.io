@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en_EN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <link rel="stylesheet" href="https://unpkg.com/tachyons@4/css/tachyons.min.css">
+  <title>Request Message</title>
+</head>
+<body>
+  <div class="w-100 w-50-l ph3 ph5-ns pv3 center">
+    <header class="flex flex-column ba">
+      <div class="nav flex flex-row w-100 justify-between ttu b">
+        <div class="flex flex-row">
+          <a href="/" class="ph2 pink br b--black hover-bg-pink hover-white">home</a>
+        </div>
+        <div class="flex flex-row">
+          <a href="https://github.com/" class="ph2 pink bl b--black hover-bg-pink hover-white">readme.md</a>
+        </div>
+      </div>
+    </header>
+    <div class="content ph4-ns ph2 pv3">
+      <h2 class="lh-title pink">Request Message</h2>
+      <p class="tj">
+        <h3 id='get'>GET</h3>
+
+<p>request a <code>resource</code> from peers</p>
+
+<pre><code>┌──────────────────────┬─────────────────────────────────────────────┬──────────────┐
+│   GET                │                   Public Key                │   PTP2/1.0   │
+├──────────────────────┼─────────────────────────────────────────────┴──────────────┤
+│   ORIGIN             │   original request address (with port)                     │
+|   Headers            |   any additional headers                                   |
+└──────────────────────┴────────────────────────────────────────────────────────────┘</code></pre>
+
+<p><strong>Required Headers:</strong> TTL</p>
+
+<p><strong>Optional Headers:</strong></p>
+
+<h3 id='put'>PUT</h3>
+
+<p>ask peers to host a given <code>resource</code></p>
+
+<pre><code>┌──────────────────────┬─────────────────────────────────────────────┬──────────────┐
+│   PUT                │                 Peer Address                │   PTP2/1.0   │
+├──────────────────────┼─────────────────────────────────────────────┴──────────────┤
+│   ORIGIN             │   original request address (with port)                     │
+|   Headers            |   any additional headers                                   |
+├──────────────────────┴────────────────────────────────────────────────────────────┤
+|                                        Data                                       |
+└───────────────────────────────────────────────────────────────────────────────────┘
+┌───────────────────────────────────────────────────────────────────────────────────┐
+│   SIGNATURE                                                                       │
+└───────────────────────────────────────────────────────────────────────────────────┘</code></pre>
+
+<p><strong>Required Headers:</strong> TTL</p>
+
+<p><strong>Optional Headers:</strong></p>
+
+<h3 id='update'>UPDATE</h3>
+
+<p>ask peers to update a <code>resource</code> with new data (requires private key)</p>
+
+<pre><code>┌──────────────────────┬─────────────────────────────────────────────┬──────────────┐
+│   UPDATE             │                   Public Key                │   PTP2/1.0   │
+├──────────────────────┼─────────────────────────────────────────────┴──────────────┤
+│   ORIGIN             │   original request address (with port)                     │
+|   Headers            |   any additional headers                                   |
+├──────────────────────┴────────────────────────────────────────────────────────────┤
+|                                        Data                                       |
+└───────────────────────────────────────────────────────────────────────────────────┘
+┌───────────────────────────────────────────────────────────────────────────────────┐
+│   SIGNATURE                                                                       │
+└───────────────────────────────────────────────────────────────────────────────────┘</code></pre>
+
+<p><strong>Required Headers:</strong> TTL</p>
+
+<p><strong>Optional Headers:</strong></p>
+
+<h3 id='sync'>SYNC</h3>
+
+<p>obtain <code>peer-list</code> from another peer</p>
+
+<pre><code>┌──────────────────────┬─────────────────────────────────────────────┬──────────────┐
+│   SYNC               │                 Peer Address                │   PTP2/1.0   │
+├──────────────────────┼─────────────────────────────────────────────┴──────────────┤
+│   ORIGIN             │   original request address (with port)                     │
+|   Headers            |   any additional headers                                   |
+└──────────────────────┴────────────────────────────────────────────────────────────┘</code></pre>
+
+<h3 id='add'>ADD</h3>
+
+<p>request to be added as a peer to another peers <code>peer-list</code> (only useful when hosting own data)</p>
+
+<pre><code>┌──────────────────────┬─────────────────────────────────────────────┬──────────────┐
+│   SYNC               │                 Peer Address                │   PTP2/1.0   │
+├──────────────────────┼─────────────────────────────────────────────┴──────────────┤
+│   ORIGIN             │   original request address (with port)                     │
+|   Headers            |   any additional headers                                   |
+└──────────────────────┴────────────────────────────────────────────────────────────┘</code></pre>
+
+<p><strong>Required Headers:</strong> TTL</p>
+
+<p><strong>Optional Headers:</strong></p>
+
+<h3 id='remove'>REMOVE</h3>
+
+<p>remove this host from other&#8217;s <code>peer-list</code></p>
+
+<pre><code>┌──────────────────────┬─────────────────────────────────────────────┬──────────────┐
+│   REMOVE             │                 Peer Address                │   PTP2/1.0   │
+├──────────────────────┼─────────────────────────────────────────────┴──────────────┤
+│   ORIGIN             │   original request address (with port)                     │
+|   Headers            |   any additional headers                                   |
+└──────────────────────┴────────────────────────────────────────────────────────────┘</code></pre>
+
+<p><strong>Required Headers:</strong> TTL</p>
+
+<p><strong>Optional Headers:</strong></p>
+
+<h3 id='ping'>PING</h3>
+
+<p>ping a peer to see if it is still alive and serving any data</p>
+
+<pre><code>┌──────────────────────┬─────────────────────────────────────────────┬──────────────┐
+│   PING               │                 Peer Address                │   PTP2/1.0   │
+├──────────────────────┼─────────────────────────────────────────────┴──────────────┤
+│   ORIGIN             │   original request address (with port)                     │
+|   Headers            |   any additional headers                                   |
+└──────────────────────┴────────────────────────────────────────────────────────────┘</code></pre>
+
+<h2 id='headers'>Headers</h2>
+
+<h4 id='ttl'>TTL</h4>
+
+<p><code>time to live</code> describes the number of &quot;hops&quot; (depth of the peer network) used to locate a <code>resource</code></p>
+
+<h4 id='resources'>RESOURCES</h4>
+
+<p>comma separated list of served <code>resources</code></p>
+
+<h4 id='content-encoding'>CONTENT-ENCODING</h4>
+
+<h4 id='content-type'>CONTENT-TYPE</h4>
+
+      </p>
+    </div>
+    <footer>
+      <div class="flex flex-row ba b">
+        <a href="https://github.com/VMLK/" class="ph2 pink br b--black hover-bg-pink hover-white">Github</a>
+        <a href="https://mstdn.social/web/@vmlk" class="ph2 pink br b--black hover-bg-pink hover-white">Mastodon</a>
+      </div>
+    </footer>
+  </div>
+</body>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,400;0,500;0,700;1,400&display=swap');
+
+body {
+  font-family: 'IBM Plex Mono', monospace;
+  background-color: #F2F2F2;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+li:before {
+  content: '§';
+  margin-left: -1em;
+  margin-right: 0.5em;
+  color: #FF80CC;
+  font-weight: bold;
+}
+
+code {
+  background-color: #dadada;
+  border-radius: 5px;
+  padding: 0px 5px 0px 5px;
+}
+
+pre code {
+  background-color: #f2f2f2;
+  border-radius: 0px;
+  padding: 0;
+}
+
+p {
+  text-align:justify
+}
+
+h1, h2, h3 {
+  line-height:1.25;
+  color: #FF80CC;
+}
+</style>
+</html>

@@ -7,7 +7,7 @@
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4/css/tachyons.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/default.min.css">
-    <title>Smth else</title>
+    <title>The PTP^2 Protocol Specification</title>
 </head>
 
 <!--TODO: Fix Mobile View and center layout-->
@@ -27,21 +27,41 @@
                 </div>
             </header>
             <div class="w-75-l w-100-ns">
-                <h1 class="f2 lh-title fw2 mb3 mt0">Smth else</h1>
+                <h1 class="f2 lh-title fw2 mb3 mt0">The PTP^2 Protocol Specification</h1>
                 <div class="f5 fw3 lh-copy mt0-ns nested-img tj athelas">
-                    <h1 id='markdown:_syntax'>Markdown: Syntax</h1>
+                    <blockquote>
+<p>Preface:</p>
 
-<h2 id='overview'>Overview</h2>
+<p>I am by no means a networking expert. It is purely a passion project exploring the potential of a fully decentralised peer-to-peer architecture and putting my own spin on it.</p>
+</blockquote>
 
-<h3 id='philosophy'>Philosophy</h3>
+<p>PTP^2 is an experimental <code>Peer-To-Peer</code>, <code>Plain Text Protocol</code> aimed at providing:</p>
 
-<p>Markdown is intended to be as easy-to-read and easy-to-write as is feasible.</p>
+<ul>
+<li><strong>complete decentralisation</strong> minimising the amount of root servers</li>
 
-<p>Readability, however, is emphasized above all else. A Markdown-formatted document should be publishable as-is, as plain text, without looking like it&#8217;s been marked up with tags or formatting instructions. While Markdown&#8217;s syntax has been influenced by several existing text-to-HTML filters -- including <a href='http://docutils.sourceforge.net/mirror/setext.html'>Setext</a>, <a href='http://www.aaronsw.com/2002/atx/'>atx</a>, <a href='http://textism.com/tools/textile/'>Textile</a>, <a href='http://docutils.sourceforge.net/rst.html'>reStructuredText</a>, <a href='http://www.triptico.com/software/grutatxt.html'>Grutatext</a>, and <a href='http://ettext.taint.org/doc/'>EtText</a> -- the single biggest source of inspiration for Markdown&#8217;s syntax is the format of plain text email.</p>
+<li>secure <strong>mutability</strong></li>
 
-<p><strong>asdf</strong> <strong>asdfasdf</strong></p>
+<li>conclusive <strong>attribution</strong></li>
 
-<p><img src='https://images-ext-2.discordapp.net/external/5-_VOacIrIGwT_dUy3Q--hKXyvTdHgeQ14_mpRbW8KY/https/upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flint%252C_Michigan_Skyline.jpg/1200px-Flint%252C_Michigan_Skyline.jpg' alt='Img' /></p>
+<li>a <strong>human readable</strong> protocol</li>
+
+<li>a <strong>reliable/fast</strong> connection</li>
+
+<li>an <strong>Internet Protocol independent</strong> communication scheme</li>
+</ul>
+
+<p>Implementation should also ensure a <strong>low memory overhead</strong> and <strong>minimise energy consumption</strong>.</p>
+
+<h2 id='specification'>Specification</h2>
+
+<p><img src='https://i.ibb.co/YctCgrY/ptp2-1.png' alt='High-level overview over the network scheme' /></p>
+
+<p>The foundation of this protocol is the <strong>asymmetric encryption</strong> scheme as it is used to ensure the <strong>attribution and mutability</strong> of data. Data or <code>resources</code> are addressed using a public key. The corresponding private key is used to sign the resource so that its validity can be verified by the receiver. The <code>signature</code> is stored alongside its <code>resource</code>. A <code>local cache</code> and a <code>remote cache</code> are kept alongside a <code>peer-list</code> to reduce the amount of time it takes to acquire a requested <code>resource</code>.</p>
+
+<h3 id='protocol'>Protocol</h3>
+
+<p>The protocol is based around the existing HTTP | Syntax | Description | | -- | -- | | Header | Title | | Paragraph | Text |</p>
 
                 </div>
             </div>
