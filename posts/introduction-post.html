@@ -10,26 +10,15 @@
     <title>Introduction Post</title>
 </head>
 
-<!--TODO: Fix Mobile View and center layout-->
+<body class="avenir">
+    <article class="measure-wide measure-m pv5 center ph3">
+      <div class="flex flex-row justify-between">
+        <h1 class="f5 b">Introduction Post</h1>
+        <h1 class="f5 icon"><a href="/">Home</a></h1>
+      </div>
 
-<body>
-    <article class="w-60-ns w-75-l ph3 ph5-ns pv5 center white">
-        <div class="flex flex-row flex-wrap justify-between pt3">
-            <header class="flex flex-column">
-                <h1 class="f2 lh-title fw2 mb3 mt0">
-                    VMLK
-                </h1>
-                <div class="navbar bw1 bt justify-end">
-                    <ul class="mv2 f4 fw4 athelas">
-                        <li class="pv1 link"><a class="dim white" href="/">Home</a></li>
-                        <li class="pv1 link"><a class="dim white" href="/">Github</a></li>
-                    </ul>
-                </div>
-            </header>
-            <div class="w-75-l w-100-ns">
-                <h1 class="f2 lh-title fw2 mb3 mt0">Introduction Post</h1>
-                <div class="f5 fw3 lh-copy mt0-ns nested-img tj athelas">
-                    <h1 id='this_is_a_test'>This is a test</h1>
+      <div class="lh-copy pv2">
+        <h1 id='this_is_a_test'>This is a test</h1>
 
 <h1 id='table_of_contents'>Table of contents</h1>
 
@@ -63,23 +52,15 @@
 
 <p>Et netus et malesuada fames ac turpis egestas integer eget. Nibh nisl condimentum id venenatis a. Est lorem ipsum dolor sit amet consectetur adipiscing. Non tellus orci ac auctor augue mauris augue neque gravida. Faucibus interdum posuere lorem ipsum dolor sit amet consectetur adipiscing. Rhoncus dolor purus non enim praesent elementum facilisis. Elit duis tristique sollicitudin nibh sit amet. Erat nam at lectus urna duis convallis convallis. Ornare massa eget egestas purus viverra accumsan in nisl. Etiam dignissim diam quis enim lobortis. Arcu ac tortor dignissim convallis aenean et tortor at risus. Sit amet tellus cras adipiscing enim eu turpis. Id neque aliquam vestibulum morbi blandit cursus risus at ultrices.</p>
 
-                </div>
-            </div>
+      </div>
+
+      <footer class="f5 lh-copy flex flex-row justify-between">
+        <div class="flex flex-column">
+          <span class="icon pr2"><a href="https://github.com/VMLK/">Github</a></span>
+          <span class="icon"><a href="https://mstdn.social/@vmlk">Mastodon</a></span>
         </div>
-        <script src="https://utteranc.es/client.js"
-            repo="VMLK/oxide"
-            issue-term="title"
-            theme="github-dark"
-            crossorigin="anonymous"
-            async>
-        </script>
-        <footer class="mt3 white bt">
-            <p class="f6 db b ttu lh-solid">VMLK</p>
-            <div class="mt2">
-                <a href="https://github.com/VMLK" title="https://github.com/VMLK" class="f6 dib blue dim">Github</a>
-                <a href="" title="Twitter" class="f6 dib pl2 blue dim">Twitter</a>
-            </div>
-        </footer>
+        <span>[Last edit: 22nd January 2022]</span>
+      </footer>
     </article>
 </body>
 
@@ -98,51 +79,69 @@
 <script>hljs.highlightAll();</script>
 
 <style>
- body {
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,sans-serif;
-    background-color: #191E1E;
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@1,200;1,300;1,400&display=swap');
+
+body {
+  background-color: #fff7f4;
+  color: #2D2828;
 }
 
-blockquote {
-    padding: 1rem;
-    border: 1px solid #f0f0f0;
-    background-color: #252929;
+.description p {
+  margin: 0em;
 }
 
-/*ul {
-    list-style: none;
-    padding: 0;
-}*/
-
-.navbar ul {
-    list-style: none;
-    padding: 0;
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.link {
-    text-decoration: underline dashed 1px;
-    text-underline-offset: 3px;
+i {
+  font-family: 'Newsreader', serif;
 }
 
 a {
-    text-decoration: underline dashed 1px;
-    text-underline-offset: 3px;
-    color: #ffffff;
-
-    opacity:1;
-    transition:opacity .15s ease-in;
+  color: #2D2828;
+  text-decoration: underline;
+  text-decoration-color: #CBC9C9;
+  text-decoration-thickness: 0.1em;
 }
 
 a:hover {
-    opacity:.5;
-    transition: opacity .15s ease-in;
-}
-strong {
-    font-weight: bold;
+  color: #CBC9C9;
 }
 
-code {
-    background-color: #252929;
+.icon::after {
+  color: #CBC9C9;
+  font-family: 'Material Icons';
+  content: "open_in_new";
+  -webkit-font-feature-settings: 'liga';
+  align-self: center;
 }
+
+h2 {
+  color: #CBC9C9;
+}
+
+h3 {
+  margin: 0;
+}
+
+/*a::before {
+  content: "(";
+}
+
+a::after {
+  content: ")";
+}*/
+
+::-moz-selection{ background: #2D2828; color: #fff7f4;}
+::selection { background: #2D2828; color: #fff7f4; }
+
+blockquote {
+  font-family: 'Newsreader', serif;
+}
+
 </style>
+
 </html>
