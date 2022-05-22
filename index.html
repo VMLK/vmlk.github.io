@@ -9,9 +9,12 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>VMLK</title>
 </head>
-<body class="avenir">
+<body class="light avenir" onload="setTheme()">
     <article class="measure-wide measure-m pv5 center ph3">
-      <h1 class="f5 b">VMLK</h1>
+      <div class="flex flex-row justify-between">
+        <h1 class="f5 b">VMLK</h1>
+        <span id="toggleTheme" class="material-icons self-center" onclick="toggleTheme()">dark_mode</span>
+      </div>
       <div class="introduction lh-copy pv2">
         <p>Fulltime student from Germany writing about various topics ranging from <i>Mathematics</i> and <i>Computer Science</i> to <i>Sociology</i> and <i>Economy</i>.</p>
         <p>In general just about anything that interests me. You can also find out more about past programming projects I've worked on.</p>
@@ -64,12 +67,69 @@
     </article>
 </body>
 
+<script type="text/javascript">
+  function setTheme() {
+    element = document.body.classList;
+    if (document.cookie) {
+      console.log("Cookie found");
+      if (document.cookie.split("=")[1] == "dark") {
+        console.log("Dark mode");
+        element = document.getElementById("toggleTheme");
+        element.innerHTML = "light_mode";
+        element = document.body.classList;
+        element.remove("light");
+        element.add("dark");
+      }
+    } else {
+      document.cookie = "theme=light;path=/";
+    }
+  }
+
+  function toggleTheme() {
+    console.log("Toggle");
+    element = document.getElementById("toggleTheme");
+    if (element.innerHTML == "light_mode") {
+      element.innerHTML = "dark_mode";
+    } else {
+      element.innerHTML = "light_mode";
+    }
+
+    element = document.body.classList;
+    if (element.contains("light")) {
+      element.remove("light");
+      element.add("dark");
+      document.cookie = "theme=dark;path=/";
+    } else {
+      element.remove("dark");
+      element.add("light");
+      document.cookie = "theme=light;path=/";
+    }
+  }
+</script>
+
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@1,200;1,300;1,400&display=swap');
 
-body {
-  background-color: #fff7f4;
-  color: #2D2828;
+:root {
+  --primary-dark: #2D2828;
+  --secondary-dark: #CBC9C9;
+  --primary-light: #fff7f4;
+
+  --highlight: #fcc21b;
+}
+
+#toggleTheme {
+  color: var(--highlight);
+}
+
+.light {
+  background-color: var(--primary-light);
+  color: var(--primary-dark);
+}
+
+.dark {
+  background-color: var(--primary-dark);
+  color: var(--primary-light);
 }
 
 .description p {
@@ -86,42 +146,75 @@ i {
   font-family: 'Newsreader', serif;
 }
 
-a {
-  color: #2D2828;
+.light a {
+  color: var(--primary-dark);
   text-decoration: underline;
-  text-decoration-color: #CBC9C9;
+  text-decoration-color: var(--secondary-dark);
   text-decoration-thickness: 0.1em;
 }
 
-a:hover {
-  color: #CBC9C9;
+.dark a {
+  color: var(--primary-light);
+  text-decoration: underline;
+  text-decoration-color: var(--secondary-dark);
+  text-decoration-thickness: 0.1em;
 }
 
-.icon::after {
-  color: #CBC9C9;
+.light a:hover {
+  color: var(--secondary-dark);
+}
+
+.dark a:hover {
+  color: var(--secondary-dark);
+}
+
+.light .icon::after {
+  color: var(--secondary-dark);
   font-family: 'Material Icons';
   content: "open_in_new";
   -webkit-font-feature-settings: 'liga';
   align-self: center;
 }
 
-h2 {
-  color: #CBC9C9;
+.dark .icon::after {
+  color: var(--secondary-dark);
+  font-family: 'Material Icons';
+  content: "open_in_new";
+  -webkit-font-feature-settings: 'liga';
+  align-self: center;
+}
+
+.light h2 {
+  color: var(--secondary-dark);
+}
+
+.dark h2 {
+  color: var(--secondary-dark);
 }
 
 h3 {
   margin: 0;
 }
 
-/*a::before {
-  content: "(";
+.light *::-moz-selection {
+  background: var(--primary-dark);
+  color: var(--primary-light);
 }
 
-a::after {
-  content: ")";
-}*/
+.light *::selection {
+  background: var(--primary-dark);
+  color: var(--primary-light);
+}
 
-::-moz-selection{ background: #2D2828; color: #fff7f4;}
-::selection { background: #2D2828; color: #fff7f4; }
+.dark *::-moz-selection {
+  background: var(--primary-light);
+  color: var(--primary-dark);
+}
+
+.dark *::selection {
+  background: var(--primary-light);
+  color: var(--primary-dark);
+}
+
 </style>
 </html>
