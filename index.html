@@ -12,7 +12,7 @@
 <body class="light avenir" onload="setTheme()">
     <article class="measure-wide measure-m pv5 center ph3">
       <div class="flex flex-row justify-between">
-        <h1 class="f5 b">VMLK</h1>
+        <h1 class="f5 b pa2 title">VMLK</h1>
         <span id="toggleTheme" class="material-icons self-center" onclick="toggleTheme()">dark_mode</span>
       </div>
       <div class="introduction lh-copy pv2">
@@ -22,13 +22,13 @@
 
       <div class="flex flex-row">
         <div class="w-50 pr2">
-          <h2 class="f6">Writing ✍️</h2>
+          <h2 class="f6">Writing</h2>
           <ul>
             <li><div class="lh-copy pv2"><h3 class="f5 icon"><a href="posts/introduction-post.html">Introduction Post</a></h3><div class="description"><p>Test</p></div></div></li><li><div class="lh-copy pv2"><h3 class="f5 icon"><a href="posts/smth-else.html">Smth else</a></h3><div class="description"><p>Test</p></div></div></li><li><div class="lh-copy pv2"><h3 class="f5 icon"><a href="posts/the-ptp^2-protocol-specification.html">The PTP^2 Protocol Specification</a></h3><div class="description"><p>A Peer-To-Peer Protocol Specification</p></div></div></li>
           </ul>
         </div>
         <div class="w-50 pl2">
-          <h2 class="f6">Work 💻</h2>
+          <h2 class="f6">Work</h2>
           <div class="lh-copy pv2">
             <h3 class="f5 icon"><a href="https://github.com/VMLK/oxide" target="_blank">Oxide</a></h3>
             <div class="description">
@@ -132,6 +132,16 @@
 }
 
 .dark {
+  background-color: var(--primary-dark);
+  color: var(--primary-light);
+}
+
+.dark .title {
+  background-color: var(--primary-light);
+  color: var(--primary-dark);
+}
+
+.light .title {
   background-color: var(--primary-dark);
   color: var(--primary-light);
 }
