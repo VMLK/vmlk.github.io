@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="1000" height="1000"><rect width="1000" height="1000" rx="100" ry="100" fill="#ffffff"></rect><g transform="matrix(1,0,0,1,0,0)"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="100mm" height="100mm"><svg width="100mm" height="100mm" viewBox="0 0 100 100" version="1.1" id="svg5" inkscape:version="1.1.2 (0a00cf5339, 2022-02-04, custom)" sodipodi:docname="lambda.svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview id="namedview7" pagecolor="#ffffff" bordercolor="#111111" borderopacity="1" inkscape:pageshadow="0" inkscape:pageopacity="0" inkscape:pagecheckerboard="1" inkscape:document-units="mm" showgrid="false" inkscape:snap-page="false" inkscape:zoom="0.38529391" inkscape:cx="-110.3054" inkscape:cy="53.206135" inkscape:window-width="1896" inkscape:window-height="1024" inkscape:window-x="10" inkscape:window-y="10" inkscape:window-maximized="0" inkscape:current-layer="layer1"></sodipodi:namedview>
+  <defs id="defs2">
+    <clipPath clipPathUnits="userSpaceOnUse" id="clipPath1279">
+      <rect style="fill:#ff0000;fill-opacity:0.989093;stroke-width:0.837576" id="rect1281" width="69.178932" height="47.867321" x="21.687796" y="19.071608"></rect>
+    </clipPath>
+  </defs>
+  <g inkscape:label="Layer 1" inkscape:groupmode="layer" id="layer1">
+    <g id="g1143" transform="matrix(1.9277209,0,0,2.1687063,-61.964342,-45.031014)" clip-path="url(#clipPath1279)">
+      <rect style="fill:#000000;fill-opacity:0.989093;stroke-width:0.104652" id="rect239" width="20" height="5" x="32.232349" y="20.828489"></rect>
+      <rect style="fill:#000000;fill-opacity:0.989093;stroke-width:0.0938663" id="rect239-3" width="16.089943" height="5" x="-13.236662" y="96.190109" transform="rotate(-54.480937)"></rect>
+      <rect style="fill:#000000;fill-opacity:0.989093;stroke-width:0.157818" id="rect239-5" width="45.482861" height="5" x="-45.869213" y="63.336964" transform="rotate(-60.182326)"></rect>
+      <rect style="fill:#000000;fill-opacity:0.989093;stroke-width:0.171266" id="rect239-6" width="53.564835" height="5" x="42.719334" y="-36.566418" transform="rotate(62.302932)"></rect>
+    </g>
+  </g>
+</svg></svg></g></svg>
