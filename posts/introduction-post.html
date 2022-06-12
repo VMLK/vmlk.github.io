@@ -17,7 +17,7 @@
         <h1 class="f5 b">Introduction Post</h1>
         <div class="flex flex-row">
           <span id="toggleTheme" class="material-icons self-center pr2" onclick="toggleTheme()">dark_mode</span>
-          <h1 class="f5 icon"><a href="/">Home</a></h1>
+          <h1 class="f5 icon light-red"><a href="/">Home</a></h1>
         </div>
       </div>
 
@@ -63,9 +63,9 @@
       <footer class="lh-copy pt5">
         <div class="f6 flex flex-column">
           <div class="dib center">
-            <span class="icon"><a href="https://github.com/VMLK/" target="_blank" class="ph">Github</a></span>|
-            <span class="icon"><a href="https://tinyletter.com/vmlk" target="_blank" class="ph">Newsletter</a></span>|
-            <span class="icon"><a href="https://mstdn.social/@vmlk" target="_blank" class="ph">Mastodon</a></span>
+            <span class="icon light-red"><a href="https://github.com/VMLK/" target="_blank" class="ph">Github</a></span>|
+            <span class="icon yellow"><a href="https://tinyletter.com/vmlk" target="_blank" class="ph">Newsletter</a></span>|
+            <span class="icon light-blue"><a href="https://mstdn.social/@vmlk" target="_blank" class="ph">Mastodon</a></span>
           </div>
           <p class="pt2 center">The content for this site is <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank">CC-BY-SA</a>. The source code for this site is <a href="https://opensource.org/licenses/GPL-3.0" target="_blank">GPL</a>.</p>
           <p class="center">Copyright © 2022</p>
@@ -192,17 +192,17 @@ i {
 }
 
 .light .icon::after {
-  color: var(--secondary-dark);
+  /*color: var(--secondary-dark);*/
   font-family: 'Material Icons';
-  content: "open_in_new";
+  content: "north_east";
   -webkit-font-feature-settings: 'liga';
   align-self: center;
 }
 
 .dark .icon::after {
-  color: var(--secondary-dark);
+  /*color: var(--secondary-dark);*/
   font-family: 'Material Icons';
-  content: "open_in_new";
+  content: "north_east";
   -webkit-font-feature-settings: 'liga';
   align-self: center;
 }
